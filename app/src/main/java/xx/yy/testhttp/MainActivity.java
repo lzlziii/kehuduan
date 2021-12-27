@@ -29,42 +29,7 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-//    findViewById(R.id.button).setOnClickListener(v -> new Thread() {
-//      public void run() {
-//        try {
-//          User x = new User();
-//
-//          String obj = SerializeUtils.serialize(x);
-//
-//          Log.e("asdf", obj);
-//
-//          URL url = new URL("http://10.0.2.2:8080/oooo");
-//
-//          HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-//          httpURLConnection.setDoInput(true);
-//          httpURLConnection.setDoOutput(true);
-//          httpURLConnection.setRequestMethod("POST");
-//          httpURLConnection.setUseCaches(false);
-//          httpURLConnection.setConnectTimeout(1000);
-//          httpURLConnection.setReadTimeout(1000);
-//          httpURLConnection.connect();
-//
-//          BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "utf-8"));
-//          String line;
-//
-//          StringBuilder stringBuilder = new StringBuilder();
-//          while ((line = bufferedReader.readLine()) != null) {
-//            stringBuilder.append(line);
-//          }
-//
-//          Log.e("msg", stringBuilder.toString());
-//          bufferedReader.close();
-//          httpURLConnection.disconnect();
-//        } catch (Exception e) {
-//          e.printStackTrace();
-//        }
-//      }
-//    }.start());
+
     findViewById(R.id.button).setOnClickListener(v -> new Thread() {
       public void run() {
         try {

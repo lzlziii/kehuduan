@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         // 打开连接
         HttpURLConnection connection = null;
         try {
+          assert postUrl != null;
           connection = (HttpURLConnection) postUrl.openConnection();
         } catch (IOException e) {
           e.printStackTrace();
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         // 配置本次连接的Content-type，配置为application/x-www-form-urlencoded的
         // 意思是正文是urlencoded编码过的form参数，下面我们可以看到我们对正文内容使用URLEncoder.encode
         // 进行编码
-        connection.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
         // 连接，从postUrl.openConnection()至此的配置必须要在connect之前完成，
         // 要注意的是connection.getOutputStream会隐含的进行connect。
         try {
@@ -151,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         }
         String line = "";
 
-        while (true){
+        while (true) {
           try {
             assert reader != null;
             if ((line = reader.readLine()) == null) break;
